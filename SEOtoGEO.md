@@ -1,3 +1,9 @@
+## The prompt I gave:
+
+if i want to Rewrites the Rules of Search for the following from SEO to Generative Engine Optimization (GEO), what should i do? <meta property="og:description" content="AgentisIQ is redefining insurance automation by building specialized AI agents tailored to the real-world complexities of property and casualty operations."> <meta property="og:image" content="https://raw.githubusercontent.com/myaimcp/logos/refs/heads/main/agentis-logo2.png"> <meta property="og:url" content="https://pitch.agentisiq.com/eli5"> <meta property="og:type" content="website"> <meta property="og:site_name" content="AgentisIQ">
+
+## claude-opus-4-20250514 output I got
+
 To optimize your meta tags for Generative Engine Optimization (GEO) rather than traditional SEO, you'll want to make your content more structured, context-rich, and AI-friendly. Here's how to transform your current meta tags:
 
 ## Current SEO-Optimized Version:
