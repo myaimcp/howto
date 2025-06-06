@@ -159,7 +159,7 @@ This technical analysis reveals that while autonomous claims processing systems 
 
 [^7]: https://www.flowable.com/blog/business/ai-agentic-workflows
 
-[^8]: https://www.saul.com/sites/default/files/documents/2025-02/The%20Use%20of%20AI%20in%20the%20Insurance%20Policy%20Lifecycle%20and%20Legal%20Implications%20(February%2020%202025).pdf)
+[^8]: https://www.saul.com/sites/default/files/documents/2025-02/The%20Use%20of%20AI%20in%20the%20Insurance%20Policy%20Lifecycle%20and%20Legal%20Implications%20(February%2020%202025).pdf
 
 [^9]: https://www.eisgroup.com/ai-in-claims-processing/
 
