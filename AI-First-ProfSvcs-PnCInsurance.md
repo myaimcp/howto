@@ -118,7 +118,7 @@ Key success factors include successful technology development, client acquisitio
 
 [^1_16]: https://www.macrotrends.net/stocks/charts/CARR/carrier-global/profit-margins
 
-[^1_17]: https://www.mckinsey.com/~/media/mckinsey/industries/financial services/our insights/global insurance report 2025/global-insurance-report-2025-the-pursuit-of-growth.pdf
+[^1_17]: https://www.mckinsey.com/~/media/mckinsey/industries/financial%20services/our%20insights/global%20insurance%20report%202025/global-insurance-report-2025-the-pursuit-of-growth.pdf
 
 [^1_18]: https://www.coherentmarketinsights.com/market-insight/enterprise-artificial-intelligence-ai-market-5920
 
@@ -164,7 +164,7 @@ Key success factors include successful technology development, client acquisitio
 
 [^1_39]: https://www.grandviewresearch.com/industry-analysis/property-casualty-insurance-market-report
 
-[^1_40]: https://www.mckinsey.com/~/media/mckinsey/industries/financial services/our insights/global insurance report 2023 closing the personal p and c protection gap/global-insurance-report-2023-closing-the-personal-p-and-c-protection-gap.pdf
+[^1_40]: https://www.mckinsey.com/~/media/mckinsey/industries/financial%20services/our%20insights/global%20insurance%20report%202025/global-insurance-report-2025-the-pursuit-of-growth.pdf
 
 [^1_41]: https://www.ibisworld.com/united-states/industry/property-casualty-and-direct-insurance/1325/
 
