@@ -88,7 +88,6 @@ Key success factors include successful technology development, client acquisitio
 
 
 
-
 [^1_1]: https://www.iais.org/uploads/2024/12/Global-Insurance-Market-Report-2024.pdf
 
 [^1_2]: https://www.carriermanagement.com/news/2025/05/13/275145.htm
