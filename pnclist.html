@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P&C Insurance Carriers Data Export</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8fafc;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .download-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .download-btn {
+            background: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #2563eb;
+        }
+        .excel-btn {
+            background: #059669;
+        }
+        .excel-btn:hover {
+            background: #047857;
+        }
+        .preview-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .preview-table th,
+        .preview-table td {
+            border: 1px solid #e2e8f0;
+            padding: 8px;
+            text-align: left;
+        }
+        .preview-table th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+        .preview-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .info-box {
+            background: #dbeafe;
+            border: 1px solid #93c5fd;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .status-prospect { background: #f3f4f6; color: #374151; }
+        .status-lead { background: #dcfce7; color: #166534; }
+        .status-contacted { background: #fae8ff; color: #86198f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>P&C Insurance Carriers - Customer Database Export</h1>
+        
+        <div class="info-box">
+            <strong>Dataset Overview:</strong> 16 Property & Casualty Insurance Carriers with annual premiums under $20B, complete with contact information, business details, and AI readiness assessment.
+        </div>
+        
+        <div class="download-section">
+            <h3>Download Options</h3>
+            <button class="download-btn" onclick="downloadCSV()">📊 Download CSV</button>
+            <button class="download-btn excel-btn" onclick="downloadExcel()">📈 Download Excel</button>
+        </div>
+        
+        <h3>Data Preview (First 5 Records)</h3>
+        <div style="overflow-x: auto;">
+            <table class="preview-table" id="previewTable">
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Contact Person</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Website</th>
+                        <th>Address</th>
+                        <th>Premium Volume ($B)</th>
+                        <th>AI Needs Score</th>
+                        <th>Status</th>
+                        <th>Business Description</th>
+                        <th>Challenge Areas</th>
+                    </tr>
+                </thead>
+                <tbody id="previewBody">
+                    <!-- Preview data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        // Complete dataset
+        const carriersData = [
+            {
+                name: "Mercury Insurance Group",
+                website: "www.mercuryinsurance.com",
+                phone: "(800) 503-3724",
+                email: "partnerships@mercuryinsurance.com",
+                address: "4484 Wilshire Blvd, Los Angeles, CA 90010",
+                contact: "Rachel Wilson, Chief Innovation Officer",
+                premiumVolume: 4.2,
+                aiNeedsScore: 8.7,
+                businessDescription: "Regional personal and commercial auto, homeowners, and business insurance provider operating in 11 states with strength in California.",
+                challengeAreas: "Claims automation, Risk assessment, Customer service",
+                status: "Lead"
+            },
+            {
+                name: "Kemper Corporation",
+                website: "www.kemper.com",
+                phone: "(312) 661-4600",
+                email: "techpartnerships@kemper.com",
+                address: "200 E Randolph St, Chicago, IL 60601",
+                contact: "Mark Chen, VP of Digital Transformation",
+                premiumVolume: 5.1,
+                aiNeedsScore: 9.2,
+                businessDescription: "Specializes in auto, home, life, and health insurance for individuals and small businesses with focus on nonstandard auto insurance market.",
+                challengeAreas: "Fraud detection, Pricing optimization, Underwriting",
+                status: "Prospect"
+            },
+            {
+                name: "American Family Insurance",
+                website: "www.amfam.com",
+                phone: "(800) 692-6326",
+                email: "ventures@amfam.com",
+                address: "6000 American Pkwy, Madison, WI 53783",
+                contact: "Sarah Johnson, Head of AI Strategy",
+                premiumVolume: 12.5,
+                aiNeedsScore: 8.3,
+                businessDescription: "Offers auto, home, property, business, life, and farm/ranch insurance products through exclusive agency force across 19 states.",
+                challengeAreas: "Predictive analytics, Virtual assistance, Personalization",
+                status: "Contacted"
+            },
+            {
+                name: "Auto-Owners Insurance",
+                website: "www.auto-owners.com",
+                phone: "(517) 323-1200",
+                email: "innovation@auto-owners.com",
+                address: "6101 Anacapri Blvd, Lansing, MI 48917",
+                contact: "Thomas Miller, CTO",
+                premiumVolume: 8.7,
+                aiNeedsScore: 7.9,
+                businessDescription: "Multi-line property and casualty insurer operating in 26 states through independent agents, offering auto, home, and business coverage.",
+                challengeAreas: "Claims processing, Agent enablement, Risk assessment",
+                status: "Prospect"
+            },
+            {
+                name: "Erie Insurance Group",
+                website: "www.erieinsurance.com",
+                phone: "(814) 870-2000",
+                email: "tech.innovation@erieinsurance.com",
+                address: "100 Erie Insurance Pl, Erie, PA 16530",
+                contact: "David Crawford, Innovation Director",
+                premiumVolume: 7.9,
+                aiNeedsScore: 8.5,
+                businessDescription: "Regional insurer offering auto, home, business, and life insurance through independent agents in 12 states and DC.",
+                challengeAreas: "Underwriting automation, Customer insights, Claims efficiency",
+                status: "Lead"
+            },
+            {
+                name: "Westfield Insurance",
+                website: "www.westfieldinsurance.com",
+                phone: "(800) 243-0210",
+                email: "digitalpartnerships@westfieldgrp.com",
+                address: "One Park Circle, Westfield Center, OH 44251",
+                contact: "Jennifer Smith, Digital Strategy Lead",
+                premiumVolume: 2.3,
+                aiNeedsScore: 9.0,
+                businessDescription: "Property and casualty insurance provider focusing on personal lines, small commercial, and farm insurance across 10 states.",
+                challengeAreas: "Agricultural risk modeling, Small business underwriting, Claims automation",
+                status: "Contacted"
+            },
+            {
+                name: "Grange Insurance",
+                website: "www.grangeinsurance.com",
+                phone: "(614) 445-2900",
+                email: "techinnovation@grangeinsurance.com",
+                address: "671 S High St, Columbus, OH 43206",
+                contact: "Michael Roberts, Head of Innovation",
+                premiumVolume: 1.5,
+                aiNeedsScore: 8.8,
+                businessDescription: "Mid-size carrier offering auto, home, life, and business insurance through independent agents in 13 Midwestern and Southeastern states.",
+                challengeAreas: "Agency enablement, Fraud detection, Customer service automation",
+                status: "Prospect"
+            },
+            {
+                name: "Plymouth Rock Assurance",
+                website: "www.plymouthrock.com",
+                phone: "(617) 951-1800",
+                email: "partnershipsupport@prac.com",
+                address: "695 Atlantic Ave, Boston, MA 02111",
+                contact: "Elizabeth Morgan, Technology Officer",
+                premiumVolume: 1.8,
+                aiNeedsScore: 8.1,
+                businessDescription: "Regional insurer specializing in auto and home insurance in the Northeast through direct and independent agent channels.",
+                challengeAreas: "Quote optimization, Digital experience, Claims processing",
+                status: "Lead"
+            },
+            {
+                name: "The Hanover Insurance Group",
+                website: "www.hanover.com",
+                phone: "(508) 855-1000",
+                email: "digitalinitiatives@hanover.com",
+                address: "440 Lincoln St, Worcester, MA 01653",
+                contact: "Robert Zhang, Digital Transformation Lead",
+                premiumVolume: 5.6,
+                aiNeedsScore: 7.7,
+                businessDescription: "Provider of property and casualty products for businesses, homes, and vehicles through a network of independent agents.",
+                challengeAreas: "Commercial risk assessment, Agent tools, Data analytics",
+                status: "Contacted"
+            },
+            {
+                name: "Safety Insurance Group",
+                website: "www.safetyinsurance.com",
+                phone: "(617) 951-0600",
+                email: "tech.partnerships@safetyins.com",
+                address: "20 Custom House St, Boston, MA 02110",
+                contact: "Christopher Lee, Innovation Manager",
+                premiumVolume: 0.9,
+                aiNeedsScore: 9.5,
+                businessDescription: "Offers property and casualty insurance products in Massachusetts, New Hampshire, and Maine through independent agents.",
+                challengeAreas: "Regional risk modeling, Claims automation, Agent support",
+                status: "Prospect"
+            },
+            {
+                name: "Selective Insurance Group",
+                website: "www.selective.com",
+                phone: "(973) 948-3000",
+                email: "tech.innovation@selective.com",
+                address: "40 Wantage Ave, Branchville, NJ 07890",
+                contact: "Amanda Reynolds, Chief Digital Officer",
+                premiumVolume: 4.2,
+                aiNeedsScore: 8.4,
+                businessDescription: "Commercial lines insurer offering property, casualty, flood, and excess and surplus coverage through independent agents in 27 states.",
+                challengeAreas: "Flood risk assessment, Commercial underwriting, Pricing optimization",
+                status: "Lead"
+            },
+            {
+                name: "Amica Mutual Insurance",
+                website: "www.amica.com",
+                phone: "(800) 242-6422",
+                email: "digital.partnerships@amica.com",
+                address: "100 Amica Way, Lincoln, RI 02865",
+                contact: "Richard Torres, SVP Technology",
+                premiumVolume: 3.8,
+                aiNeedsScore: 7.8,
+                businessDescription: "Direct writer of personal lines insurance including auto, home, marine, umbrella, and life products nationwide.",
+                challengeAreas: "Customer service, Claims experience, Risk segmentation",
+                status: "Prospect"
+            },
+            {
+                name: "Cincinnati Financial",
+                website: "www.cinfin.com",
+                phone: "(513) 870-2000",
+                email: "innovation@cinfin.com",
+                address: "6200 S Gilmore Rd, Fairfield, OH 45014",
+                contact: "Kevin Peterson, Innovation Lead",
+                premiumVolume: 9.2,
+                aiNeedsScore: 8.0,
+                businessDescription: "Property and casualty insurer operating through independent agents, offering personal, commercial, and excess and surplus lines.",
+                challengeAreas: "Agency efficiency, Commercial lines analysis, Claims processing",
+                status: "Contacted"
+            },
+            {
+                name: "MAPFRE Insurance",
+                website: "www.mapfreinsurance.com",
+                phone: "(508) 366-9300",
+                email: "tech.ventures@mapfreusa.com",
+                address: "11 Gore Rd, Webster, MA 01570",
+                contact: "Maria Rodriguez, Digital Officer",
+                premiumVolume: 2.8,
+                aiNeedsScore: 9.3,
+                businessDescription: "Multi-national insurer with U.S. focus on personal auto and home coverage operating in 19 states with strength in Massachusetts.",
+                challengeAreas: "Underwriting automation, Digital customer experience, Fraud detection",
+                status: "Lead"
+            },
+            {
+                name: "West Bend Mutual Insurance",
+                website: "www.thesilverlining.com",
+                phone: "(262) 334-5571",
+                email: "tech.partners@wbmi.com",
+                address: "1900 S 18th Ave, West Bend, WI 53095",
+                contact: "Daniel Phillips, Technology Director",
+                premiumVolume: 1.2,
+                aiNeedsScore: 8.6,
+                businessDescription: "Regional property and casualty insurer focusing on personal and commercial lines in the Midwest through independent agents.",
+                challengeAreas: "Commercial risk assessment, Claims automation, Agent enablement",
+                status: "Prospect"
+            },
+            {
+                name: "Shelter Insurance",
+                website: "www.shelterinsurance.com",
+                phone: "(573) 445-5774",
+                email: "innovation@shelterinsurance.com",
+                address: "1817 W Broadway, Columbia, MO 65218",
+                contact: "Jessica Thompson, Innovation Manager",
+                premiumVolume: 2.1,
+                aiNeedsScore: 8.9,
+                businessDescription: "Multi-line insurer providing auto, home, life, and farm insurance across 15 Midwestern and Southern states through exclusive agents.",
+                challengeAreas: "Weather risk modeling, Customer segmentation, Claims processing",
+                status: "Contacted"
+            }
+        ];
+
+        // Populate preview table
+        function populatePreview() {
+            const tbody = document.getElementById('previewBody');
+            carriersData.slice(0, 5).forEach(carrier => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${carrier.name}</strong></td>
+                    <td>${carrier.contact}</td>
+                    <td>${carrier.email}</td>
+                    <td>${carrier.phone}</td>
+                    <td>${carrier.website}</td>
+                    <td>${carrier.address}</td>
+                    <td>$${carrier.premiumVolume.toFixed(1)}B</td>
+                    <td>${carrier.aiNeedsScore}</td>
+                    <td><span class="status-badge status-${carrier.status.toLowerCase()}">${carrier.status}</span></td>
+                    <td>${carrier.businessDescription.substring(0, 100)}...</td>
+                    <td>${carrier.challengeAreas}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Convert to CSV format
+        function convertToCSV(data) {
+            const headers = [
+                'Company Name',
+                'Contact Person',
+                'Email',
+                'Phone',
+                'Website',
+                'Address',
+                'Premium Volume ($B)',
+                'AI Needs Score',
+                'Status',
+                'Business Description',
+                'Challenge Areas'
+            ];
+
+            const csvContent = [
+                headers.join(','),
+                ...data.map(carrier => [
+                    `"${carrier.name}"`,
+                    `"${carrier.contact}"`,
+                    `"${carrier.email}"`,
+                    `"${carrier.phone}"`,
+                    `"${carrier.website}"`,
+                    `"${carrier.address}"`,
+                    carrier.premiumVolume,
+                    carrier.aiNeedsScore,
+                    `"${carrier.status}"`,
+                    `"${carrier.businessDescription}"`,
+                    `"${carrier.challengeAreas}"`
+                ].join(','))
+            ].join('\n');
+
+            return csvContent;
+        }
+
+        // Download CSV file
+        function downloadCSV() {
+            const csvContent = convertToCSV(carriersData);
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'PC_Insurance_Carriers_Customer_Database.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Download Excel file
+        function downloadExcel() {
+            const worksheet = XLSX.utils.json_to_sheet(carriersData.map(carrier => ({
+                'Company Name': carrier.name,
+                'Contact Person': carrier.contact,
+                'Email': carrier.email,
+                'Phone': carrier.phone,
+                'Website': carrier.website,
+                'Address': carrier.address,
+                'Premium Volume ($B)': carrier.premiumVolume,
+                'AI Needs Score': carrier.aiNeedsScore,
+                'Status': carrier.status,
+                'Business Description': carrier.businessDescription,
+                'Challenge Areas': carrier.challengeAreas
+            })));
+
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, 'PC Insurance Carriers');
+
+            // Auto-fit column widths
+            const cols = [
+                { wch: 25 }, // Company Name
+                { wch: 30 }, // Contact Person
+                { wch: 35 }, // Email
+                { wch: 18 }, // Phone
+                { wch: 25 }, // Website
+                { wch: 40 }, // Address
+                { wch: 15 }, // Premium Volume
+                { wch: 12 }, // AI Needs Score
+                { wch: 12 }, // Status
+                { wch: 60 }, // Business Description
+                { wch: 40 }  // Challenge Areas
+            ];
+            worksheet['!cols'] = cols;
+
+            XLSX.writeFile(workbook, 'PC_Insurance_Carriers_Customer_Database.xlsx');
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            populatePreview();
+        });
+    </script>
+</body>
+</html>
