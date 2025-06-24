@@ -1,4 +1,4 @@
-Here is a detailed list of key AI influencers globally, capturing their perspectives on the "AI-first consulting and professional services model," categorized by their roles:
+Key AI influencers globally, capturing their perspectives on the AI-first consulting and professional services model:
 
 ### I. AI Company Executives
 
