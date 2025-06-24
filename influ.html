@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <meta charset="UTF-8">
+  <title>Global AI Influencers</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 40px; }
+    #content { max-width: 800px; }
+  </style>
+</head>
+<body>
+<!--  <h1>Markdown Viewer</h1> -->
+  <div id="content">Loading...</div>
+  <script>
+    fetch('ai-influ.md')
+      .then(response => response.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(error => {
+        document.getElementById('content').innerText = 'Could not load markdown file.';
+      });
+  </script>
+</body>
+</html>
