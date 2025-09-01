@@ -55,5 +55,3 @@ Xi’s words at the summit stick with me: “Reject Cold War mentality.” They�
 ## My Takeaway for You
 
 Here’s the big insight I want you to carry away: this isn’t just about leaders in suits, it’s about us. The dollar’s dominance isn’t guaranteed, and that’s okay. It’s a chance to rethink how we connect globally, support local economies, maybe even push for fairer trade. Share your thoughts below, let’s figure this out together. Because if September 1, 2025, marks the end of one era, it’s up to us to shape the next.
-
-*(Word count: 823)*
