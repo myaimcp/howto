@@ -83,5 +83,3 @@ This structure gives a comprehensive, investor- and team-ready blueprint tailore
   - Admin dashboard for underwriters and escalation/human-in-the-loop review
 
 ***
-
-This structure gives you a comprehensive, investor- and team-ready blueprint tailored for an AI-native, next-generation insurance company like AgentisIQ.
