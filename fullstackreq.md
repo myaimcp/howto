@@ -1,4 +1,4 @@
-** This structure gives a comprehensive, investor- and team-ready blueprint tailored for an AI-native, next-generation insurance company like AgentisIQ.
+**This structure gives a comprehensive, investor- and team-ready blueprint tailored for an AI-native, next-generation insurance company like AgentisIQ.**
 
 ### Product Overview
 
