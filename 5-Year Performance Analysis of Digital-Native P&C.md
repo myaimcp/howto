@@ -9,7 +9,7 @@ Based on comprehensive analysis of loss ratios, combined ratios, and revenue tre
     style="max-width:100%; height:auto;"
   />
 </div>
-5-Year Performance Analysis of Digital-Native P\&C Insurance Companies: Loss Ratios, Combined Ratios, and Revenue Trends (2020-2025)
+5-Year Performance Analysis of Digital-Native P\&C Insurance Companies: Combined Ratio Trends (2020-2025)
 
 ## Key Performance Transformation Stories
 
