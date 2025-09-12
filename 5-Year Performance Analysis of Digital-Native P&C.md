@@ -2,7 +2,7 @@
 
 Based on comprehensive analysis of loss ratios, combined ratios, and revenue trends from 2020 through Q2 2025, the digital-native property & casualty insurance landscape shows dramatic transformation and varying degrees of success among leading players.
 
-![5-Year Performance Analysis of Digital-Native P\&C Insurance Companies: Loss Ratios, Combined Ratios, and Revenue Trends (2020-2025)]([https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/2cc489791012fdb82af5d9a577822344/a6b4295c-d8ae-4a10-9a24-b64d0eecdff7/6ee0b15f.png](https://camo.githubusercontent.com/27e39ab6014ef475dc2645e2da618fb9afe7200114018f01a70fb76326a6e8ef/68747470733a2f2f70706c2d61692d636f64652d696e7465727072657465722d66696c65732e73332e616d617a6f6e6177732e636f6d2f7765622f6469726563742d66696c65732f32636334383937393130313266646238326166356439613537373832323334342f61366234323935632d643861652d346131302d396132342d6236346430656563646666372f36656530623135662e706e67))
+![5-Year Performance Analysis of Digital-Native P\&C Insurance Companies: Loss Ratios, Combined Ratios, and Revenue Trends (2020-2025)]([https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/2cc489791012fdb82af5d9a577822344/a6b4295c-d8ae-4a10-9a24-b64d0eecdff7/6ee0b15f.png])
 
 5-Year Performance Analysis of Digital-Native P\&C Insurance Companies: Loss Ratios, Combined Ratios, and Revenue Trends (2020-2025)
 
