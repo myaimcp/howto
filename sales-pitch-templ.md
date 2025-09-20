@@ -1,4 +1,4 @@
-Here’s a detailed, fill-in-the-blank template for a sales pitch deck, fully based on “The 5 Elements of a Brilliant Sales Narrative” from the article you provided. This template follows the proven Zuora structure so you can plug in details, adapt slide by slide, and build an engaging, strategic narrative for your next sales pitch.[1]
+Here’s a detailed, fill-in-the-blank template for a sales pitch deck, fully based on “The 5 Elements of a Brilliant Sales Narrative” from the article you provided. This template follows the proven Zuora structure so you can plug in details, adapt slide by slide, and build an engaging, strategic narrative for your next sales pitch.
 
 ***
 
@@ -85,6 +85,4 @@ Here’s a detailed, fill-in-the-blank template for a sales pitch deck, fully ba
 - Structure your deck exactly in this order for greatest narrative power.
 - Keep focus on the change, stakes, and the path to the Promised Land—not just product specs.
 
-This structure will help you craft a highly engaging, high-conversion sales pitch deck that makes prospects lean in, not tune out.[1]
-
-[1](https://medium.com/the-mission/the-greatest-sales-deck-ive-ever-seen-4f4ef3391ba0)
+This structure will help you craft a highly engaging, high-conversion sales pitch deck that makes prospects lean in, not tune out.
