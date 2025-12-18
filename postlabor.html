@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Post-Labor Economy: Elon Musk's Vision for 2035-2045</title>
+    <style>
+        :root {
+            --color-primary: #0891b2;
+            --color-primary-light: #06b6d4;
+            --color-bg: #0f172a;
+            --color-surface: #1e293b;
+            --color-text: #f1f5f9;
+            --color-text-secondary: #cbd5e1;
+            --color-accent: #10b981;
+            --color-warning: #f59e0b;
+            --color-error: #ef4444;
+            --spacing: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #1a2332 100%);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(8, 145, 178, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.25em;
+            color: var(--color-text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .source {
+            font-size: 0.9em;
+            color: var(--color-primary-light);
+            margin-top: 24px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+            padding: 16px 0;
+            z-index: 100;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .container {
+            display: flex;
+            gap: 32px;
+            overflow-x: auto;
+        }
+
+        nav a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: var(--color-primary-light);
+        }
+
+        .section {
+            margin-bottom: 80px;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 24px;
+            color: var(--color-primary-light);
+            border-left: 4px solid var(--color-accent);
+            padding-left: 16px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(20, 30, 48, 0.8) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.2);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1);
+        }
+
+        .card-title {
+            font-size: 1.3em;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 48px;
+            position: relative;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 100%;
+            width: 2px;
+            height: 48px;
+            background: linear-gradient(180deg, var(--color-primary-light), transparent);
+        }
+
+        .timeline-marker {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            flex-shrink: 0;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 24px;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 8px;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .timeline-year {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--color-primary-light);
+            margin-bottom: 8px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 32px 0;
+        }
+
+        .comparison-box {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(20, 30, 48, 0.8) 100%);
+            border-radius: 12px;
+            padding: 28px;
+            border: 2px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .comparison-box.future {
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .comparison-label {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--color-primary-light);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comparison-box.future .comparison-label {
+            color: var(--color-accent);
+        }
+
+        .comparison-list {
+            list-style: none;
+        }
+
+        .comparison-list li {
+            padding: 8px 0;
+            color: var(--color-text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .comparison-list li::before {
+            content: '→';
+            color: var(--color-primary-light);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .comparison-box.future .comparison-list li::before {
+            content: '✓';
+            color: var(--color-accent);
+        }
+
+        .key-insight {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border-left: 4px solid var(--color-accent);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+            font-style: italic;
+            color: var(--color-text);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(8, 145, 178, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--color-primary-light);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--color-text-secondary);
+            font-size: 0.95em;
+        }
+
+        .challenge-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            border-left: 4px solid var(--color-error);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .challenge-box h4 {
+            color: var(--color-warning);
+            margin-bottom: 12px;
+        }
+
+        .quote {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: var(--color-primary-light);
+            border-left: 4px solid var(--color-accent);
+            padding: 24px;
+            margin: 40px 0;
+            font-style: italic;
+            background: rgba(6, 182, 212, 0.05);
+            border-radius: 4px;
+        }
+
+        .quote-source {
+            font-size: 0.85em;
+            color: var(--color-text-secondary);
+            margin-top: 12px;
+            font-style: normal;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.95);
+            border-top: 1px solid rgba(6, 182, 212, 0.2);
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+            color: var(--color-text-secondary);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1.2em;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .container {
+                gap: 16px;
+            }
+
+            .timeline-item {
+                gap: 16px;
+            }
+
+            .timeline-marker {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5em;
+            }
+
+            header {
+                padding: 40px 0;
+            }
+
+            .back-to-top {
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>The Post-Labor Economy</h1>
+            <p class="subtitle">Elon Musk's Vision for a Moneyless, Energy-Based Future (2035–2045)</p>
+            <p class="source">From: Elon Musk x Nikhil Kamath Podcast | People by WTF, November 2025</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#overview">Overview</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#economy-shift">Economy Shift</a>
+            <a href="#key-concepts">Key Concepts</a>
+            <a href="#challenges">Challenges</a>
+            <a href="#implications">Implications</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="overview" class="section">
+            <h2>📊 Overview</h2>
+            <p>In his recent conversation with entrepreneur Nikhil Kamath, Elon Musk presented a transformative vision of human civilization over the next 10–20 years. His thesis: <strong>money will cease to exist as a meaningful concept</strong>, replaced by a post-scarcity economy powered by AI and robotics, where energy becomes the fundamental constraint.</p>
+
+            <div class="key-insight">
+                "I think money disappears as a concept, honestly. It's kind of strange, but in a future where anyone can have anything, you no longer need money as a database for labour allocation. If AI and robotics are big enough to satisfy all human needs, then money is no longer necessary. Its relevance declines dramatically."
+                <div class="quote-source">— Elon Musk</div>
+            </div>
+
+            <p>This vision extends beyond mere economic theory. Musk argues that within 10–15 years (and certainly within 20), work will transition from mandatory to optional as AI and humanoid robots become capable of performing virtually any task—physical or intellectual—faster and more efficiently than humans.</p>
+        </section>
+
+        <section id="timeline" class="section">
+            <h2>⏱️ The Transition Timeline</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">Today: Labor-Driven Economy</div>
+                        <p><strong>Money = Database for Labor Allocation</strong></p>
+                        <p>Work is mandatory for survival. Economic value is tied to human labor. Scarcity defines economic policy. Wages compensate for time and effort. Employment is a necessity, not a choice.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2030</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">Transition (Mid-Point)</div>
+                        <p><strong>AI & Robotics Begin Mass Deployment</strong></p>
+                        <p>Humanoid robots (Tesla Optimus, others) enter production at scale. AI reaches near-human intelligence across most domains. Productivity skyrockets, deflation begins. Massive job displacement triggers UHI debates.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">2035-2045</div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">Post-Labor Economy</div>
+                        <p><strong>Work Becomes Optional; Money Becomes Obsolete</strong></p>
+                        <p>AI and robots satisfy all material human needs. Work is voluntary (hobby-like pursuit of passion). Money is replaced by energy as the core economic constraint. Universal High Income ensures abundance. Meaning shifts to consciousness expansion and exploration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="economy-shift" class="section">
+            <h2>🔄 The Economic Transformation</h2>
+
+            <h3>From Labor Allocation to Energy Optimization</h3>
+            <p>Musk's framework rests on a fundamental insight: <strong>money is not intrinsically valuable—it is a tool.</strong> Specifically, it is a "database for labor allocation" in a world of scarcity.</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-box">
+                    <div class="comparison-label">Today's Economy</div>
+                    <ul class="comparison-list">
+                        <li>Money allocates scarce human labor</li>
+                        <li>Work is mandatory for survival</li>
+                        <li>Wage = compensation for time</li>
+                        <li>Productivity limited by human capacity</li>
+                        <li>Scarcity is the organizing principle</li>
+                        <li>Inequality based on labor access</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-box future">
+                    <div class="comparison-label">Future Economy</div>
+                    <ul class="comparison-list">
+                        <li>Energy becomes the core constraint</li>
+                        <li>Work is entirely optional</li>
+                        <li>Universal High Income ensures baseline</li>
+                        <li>Productivity limited only by energy/physics</li>
+                        <li>Abundance is the organizing principle</li>
+                        <li>Equality enabled by universal access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Why Energy Becomes Currency</h3>
+            <p>In Musk's post-labor model, energy replaces money because:</p>
+            <div class="card">
+                <div class="card-title"><span class="emoji">⚡</span> Energy is the Ultimate Constraint</div>
+                <p>Once AI and robots can produce any good or service, the only remaining physical limit is the energy required to power those systems. Solar, nuclear, and fusion energy become the real "stored value."</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">🌍</span> Energy is Universal and Measurable</div>
+                <p>Energy output (joules, watts) is objective, reproducible, and independent of human judgment—making it a more natural "currency" than fiat money.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">♻️</span> Energy Enables Recursion</div>
+                <p>Renewable energy (especially solar) can be infinitely scaled, creating a virtuous cycle: more energy → more production → more surplus → reinvestment in energy infrastructure.</p>
+            </div>
+        </section>
+
+        <section id="key-concepts" class="section">
+            <h2>🧠 Key Concepts</h2>
+
+            <h3>1. Universal High Income (UHI)</h3>
+            <div class="card">
+                <p>Unlike Universal Basic Income (which implies bare subsistence), UHI envisions a system where AI-generated surpluses are distributed such that <strong>everyone lives at a high standard of living</strong>.</p>
+                <p><strong>Mechanism:</strong> Deflationary pressure (caused by robots doing nearly all work) makes goods and services cheap. A modest monthly UHI payment covers not just necessities but comfortable living, travel, entertainment, and optional experiences.</p>
+                <p><strong>Example:</strong> Just as the U.S. child tax credit distributes resources monthly, a future economy could distribute energy/resource credits monthly to all citizens.</p>
+            </div>
+
+            <h3>2. Deflation as Solution to Debt</h3>
+            <div class="card">
+                <p>Musk argues that the only way to solve the U.S. national debt crisis is through <strong>massive productivity-driven deflation</strong>.</p>
+                <p>If AI and robots reduce production costs to near-zero, the nominal value of goods collapses, but <strong>real purchasing power increases</strong> (you can buy more with the same money). This effectively "solves" debt by making it negligible relative to economic output.</p>
+            </div>
+
+            <h3>3. Work as Hobby</h3>
+            <div class="card">
+                <p>In the post-labor economy, work becomes optional—like gardening, chess, or painting today.</p>
+                <p>People may still engage in work (art, science, craft, teaching) but entirely for intrinsic motivation, not survival. This decouples <strong>income from effort</strong>, solving the meaning-and-purpose crisis.</p>
+            </div>
+
+            <h3>4. The Shift in Human Purpose</h3>
+            <div class="card">
+                <p>If AI and robots handle production, <strong>humanity's role shifts from "problem-solvers" to "question-askers."</strong></p>
+                <p>Musk describes this as expanding the scope of consciousness to explore deeper questions about the universe, reality, and existence—aligning with his broader philosophy of extending consciousness across the cosmos (Kardashev scale).</p>
+            </div>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10-20</div>
+                    <div class="stat-label">Years to Post-Labor Transition</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Probability (per Musk's estimate)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Scalability of Renewable Energy</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="section">
+            <h2>⚠️ Critical Challenges & Risks</h2>
+
+            <div class="challenge-box">
+                <h4>1. Transition Inequality</h4>
+                <p>The period between now and post-labor abundance could see massive inequality. Those who own AI/robot IP and energy infrastructure could accumulate unprecedented wealth before UHI is implemented. Social unrest and political instability are real risks.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h4>2. Concentration of Power</h4>
+                <p>If a few entities control the AI and energy systems, they effectively control all production. This could create a new form of feudalism unless distributed ownership models emerge.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h4>4. AI Alignment & Values</h4>
+                <p>Musk emphasizes that AI must prioritize "truth and beauty" (aligned values). If AI systems are trained to optimize for the wrong objectives, abundance could turn dystopian.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h4>5. Meaning and Purpose Crisis</h4>
+                <p>A jobless society may solve material scarcity but not existential purpose. How will people find meaning without work? Education, creativity, and community may be crucial.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h4>6. Geopolitical Conflict</h4>
+                <p>Autonomous systems and AI weaponization could escalate conflicts during the transition. Without careful governance, competition over energy and resources could turn destructive.</p>
+            </div>
+
+            <div class="challenge-box">
+                <h4>7. Global Fertility & Demographics</h4>
+                <p>Musk is deeply concerned about falling fertility rates (including in India). Fewer humans means less total consciousness and potential civilizational decline—even in a post-labor world.</p>
+            </div>
+        </section>
+
+        <section id="implications" class="section">
+            <h2>🌟 Implications & Takeaways</h2>
+
+            <h3>For Individuals</h3>
+            <div class="card">
+                <div class="card-title"><span class="emoji">🎓</span> Education Becomes Optional but Important</div>
+                <p>Traditional degrees (esp. MBAs) may lose relevance. However, broad intellectual development, creativity, and philosophical inquiry become more valuable than ever. Lifelong learning for passion, not credentials.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">🚀</span> Entrepreneurship Remains Attractive</div>
+                <p>Building genuinely useful products and services will still be rewarding—but the reward structure shifts from pure financial gain to impact, legacy, and personal fulfillment.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">💰</span> Financial Inequality May First Increase</div>
+                <p>Before UHI is implemented, early adopters of AI/robotics may accumulate vast wealth. Strategic positioning in tech and energy sectors could be crucial during the transition.</p>
+            </div>
+
+            <h3>For Societies & Governments</h3>
+            <div class="card">
+                <div class="card-title"><span class="emoji">⚖️</span> UHI Implementation is Critical</div>
+                <p>Governments must prepare distribution mechanisms for UHI to prevent social collapse. This requires rethinking taxation, ownership, and resource allocation.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">🔋</span> Energy Infrastructure is Existential</div>
+                <p>Investment in renewable energy (solar, nuclear, fusion) becomes as critical as any military or economic strategy. Energy abundance determines post-labor viability.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">🤖</span> AI Governance & Alignment Frameworks are Urgent</div>
+                <p>International agreements on AI values, safety, and alignment must be established now to prevent misaligned superintelligence from corrupting the post-labor transition.</p>
+            </div>
+
+            <h3>For Entrepreneurs & Business</h3>
+            <div class="card">
+                <div class="card-title"><span class="emoji">📊</span> "Make More Than You Take"</span></div>
+                <p>Musk's advice to young entrepreneurs: focus on creating genuine value, accept hard work and failure, and let financial returns follow naturally. In a post-labor economy, businesses that deliver real utility will thrive.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="emoji">🌐</span> AI & Automation as Business Foundation</span></div>
+                <p>The next 10–20 years will reward companies that deeply integrate AI and robotics into operations. First-mover advantage in automation is substantial.</p>
+            </div>
+
+            <h3>The Bottom Line</h3>
+            <div class="key-insight">
+                We stand at a hinge point in human history. The transition to a post-labor economy is not inevitable—it requires deliberate choices about AI alignment, energy infrastructure, and economic distribution. But if humanity navigates this transition wisely, we could achieve an age of abundance where material scarcity is solved, and human purpose shifts from survival to exploration, creation, and consciousness expansion.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💭 Final Thoughts</h2>
+            <p>Musk's vision is simultaneously optimistic and sobering. Optimistic because it suggests a future where poverty, hunger, and survival anxiety are solved by technology. Sobering because it demands immediate action on AI alignment, energy infrastructure, and social policy to avoid catastrophic inequality or misaligned AI.</p>
+            <p>The question for this decade is not whether this future is possible—but whether we'll choose wisely as it arrives.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Post-Labor Economy Analysis | Based on Elon Musk x Nikhil Kamath Podcast (November 2025)</p>
+            <p style="margin-top: 16px; font-size: 0.9em;">This content is informational and represents Elon Musk's public statements. Future outcomes are inherently uncertain.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
