@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturals 2.0: The Algorithmic Apothecary (Global)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+        .chart-container { position: relative; width: 100%; max-width: 650px; margin: auto; height: 350px; }
+        .gradient-bg { background: linear-gradient(135deg, #312E81 0%, #4338CA 100%); }
+        .accent-text { color: #06B6D4; }
+        .stat-card { background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); padding: 1.5rem; }
+    </style>
+    <!-- 
+        HTML Comment: Source Material Plan Summary
+        - Integrated USA Data: $19.8B (2024) to $47B (2030) at 16% CAGR.
+        - Comparative Analysis: Side-by-side growth bars for India vs USA.
+        - Strategic Focus: "Biological Complexity" (India) vs "Agentic Commerce" (USA).
+        - Technical Implementation: Chart.js with multi-line label wrapping and custom tooltips.
+        NO SVG USED. NO MERMAID JS USED.
+    -->
+</head>
+<body>
+
+    <header class="gradient-bg text-white py-12 px-6 text-center shadow-2xl">
+        <h1 class="text-4xl md:text-6xl font-black mb-4">THE ALGORITHMIC APOTHECARY</h1>
+        <p class="text-xl text-indigo-100 max-w-3xl mx-auto font-light">
+            A Global Biotech Platform Bridging <span class="text-cyan-400 font-bold">India's Biological Data</span> & <span class="text-fuchsia-400 font-bold">USA's Agentic Commerce</span>.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6 md:p-12 space-y-16">
+
+        <!-- SECTION 1: GLOBAL MARKET DATA -->
+        <section class="space-y-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900">A Tale of Two Superpowers</h2>
+                <p class="text-gray-600 mt-2">Comparing the growth dynamics of the World's most strategic beauty markets.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="stat-card">
+                    <h3 class="text-xl font-bold mb-4 text-indigo-900">Growth Projection (USD Billions)</h3>
+                    <div class="chart-container">
+                        <canvas id="marketChart"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-4 italic text-center">Data based on 2024-2033 (India) and 2024-2030 (USA) projections.</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="stat-card border-l-8 border-indigo-600">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm font-bold text-indigo-600 uppercase">India Opportunity</p>
+                                <h4 class="text-2xl font-black">$48.5B Market</h4>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-green-600 font-bold">1.73x Growth</span>
+                                <p class="text-xs text-gray-500">Tier 2/3 Expansion</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Focused on high biological diversity and climate-responsive fusion across 1.4B profiles.</p>
+                    </div>
+
+                    <div class="stat-card border-l-8 border-fuchsia-600">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm font-bold text-fuchsia-600 uppercase">USA Opportunity</p>
+                                <h4 class="text-2xl font-black">$47.0B Market</h4>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-green-600 font-bold">16% CAGR</span>
+                                <p class="text-xs text-gray-500">Agentic Commerce</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">Focused on 76% consumer openness to AI and a massive 2.4x growth multiple in prestige beauty.</p>
+                    </div>
+
+                    <div class="bg-cyan-900 text-white p-6 rounded-xl shadow-lg">
+                        <h4 class="font-bold mb-2">The "Early Mover" Gap (USA)</h4>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-4xl font-black text-cyan-400">10%</div>
+                            <p class="text-sm text-cyan-100">Only 10% of US beauty executives currently use AI regularly. Naturals 2.0 closes this gap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: THE WASTE GAP -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 chart-container">
+                <canvas id="wasteChart"></canvas>
+            </div>
+            <div class="order-1 md:order-2 space-y-4">
+                <h2 class="text-3xl font-bold text-gray-900">Unlocking "Trapped Value"</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Across both markets, the "Legacy Leak" accounts for **30% of total product costs**. By automating the apothecary, we convert this waste directly into EBITDA margin.
+                </p>
+                <div class="bg-white p-4 rounded-lg shadow-inner border border-gray-100">
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-fuchsia-500 mr-2">●</span>
+                            <span class="text-sm"><strong>US Market:</strong> Solving "Prestige Growth" stagnation with automated R&D.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2">●</span>
+                            <span class="text-sm"><strong>India Market:</strong> Solving geographic diversity with localized climate-tuning.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: STRATEGIC MATURITY -->
+        <section class="bg-white p-8 rounded-3xl shadow-xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold">AI Maturity & The Platform Moat</h2>
+                <p class="text-gray-500 italic">Competitor Maturity Index vs. Naturals 2.0 Target</p>
+            </div>
+            <div class="chart-container max-w-4xl">
+                <canvas id="maturityChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 px-6 mt-12 text-center">
+        <p class="text-indigo-400 font-bold tracking-widest uppercase text-sm mb-4">Execution Strategy</p>
+        <div class="flex flex-wrap justify-center gap-8 mb-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold">SCAN</div>
+                <div class="text-xs text-gray-500">Biological Input</div>
+            </div>
+            <div class="text-xl text-gray-700">→</div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-cyan-400">ANALYZE</div>
+                <div class="text-xs text-gray-500">Beauty LLM</div>
+            </div>
+            <div class="text-xl text-gray-700">→</div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-fuchsia-400">FORMULATE</div>
+                <div class="text-xs text-gray-500">Robotic Prep</div>
+            </div>
+        </div>
+        <p class="text-gray-500 text-sm">© 2025 Algorithmic Apothecary | Naturals 2.0 Global Strategic Brief</p>
+    </footer>
+
+    <script>
+        // --- HELPER: Label Wrapping ---
+        function wrapLabel(label) {
+            if (typeof label !== 'string' || label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= 16) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const sharedTooltip = {
+            callbacks: {
+                title: function(items) {
+                    const label = items[0].chart.data.labels[items[0].dataIndex];
+                    return Array.isArray(label) ? label.join(' ') : label;
+                }
+            }
+        };
+
+        // --- CHART 1: MARKET COMPARISON ---
+        new Chart(document.getElementById('marketChart'), {
+            type: 'bar',
+            data: {
+                labels: ['India (2024)', 'India (2033)', 'USA (2024)', 'USA (2030)'],
+                datasets: [{
+                    label: 'Market Size ($B)',
+                    data: [28.0, 48.5, 19.8, 47.0],
+                    backgroundColor: ['#312E81', '#4F46E5', '#D946EF', '#A21CAF'],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { tooltip: sharedTooltip, legend: { display: false } },
+                scales: { y: { beginAtZero: true, title: { display: true, text: 'USD Billions' } } }
+            }
+        });
+
+        // --- CHART 2: WASTE ---
+        new Chart(document.getElementById('wasteChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Precision Utilization', 'Legacy Waste (Leak)'],
+                datasets: [{
+                    data: [70, 30],
+                    backgroundColor: ['#06B6D4', '#F43F5E'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'The 30% Margin Unlock' },
+                    tooltip: sharedTooltip
+                }
+            }
+        });
+
+        // --- CHART 3: MATURITY ---
+        new Chart(document.getElementById('maturityChart'), {
+            type: 'bar',
+            data: {
+                labels: ['L\'Oréal', 'Estée Lauder', 'Nykaa', 'Tira', 'Naturals 2.0 (Target)'].map(wrapLabel),
+                datasets: [{
+                    label: 'AI Maturity Index (%)',
+                    data: [82, 78, 75, 72, 95],
+                    backgroundColor: ['#E2E8F0', '#E2E8F0', '#E2E8F0', '#E2E8F0', '#06B6D4'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { tooltip: sharedTooltip, legend: { display: false } },
+                scales: { x: { max: 100, title: { display: true, text: 'Maturity Percentage (%)' } } }
+            }
+        });
+    </script>
+</body>
+</html>
