@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <meta charset="UTF-8">
+  <title>Building an Autonomous AI Agent for P&C Claims Processing in n8n
+</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 40px; }
+    #content { max-width: 700px; }
+  </style>
+</head>
+<body>
+  <div id="content">Loading...</div>
+  <script>
+    fetch('P&C_Claims_AI_Agent_n8n_Guide.md')
+      .then(response => response.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(error => {
+        document.getElementById('content').innerText = 'Could not load markdown file.';
+      });
+  </script>
+</body>
+</html>
